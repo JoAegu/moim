@@ -8,7 +8,8 @@
 <style>
 
 body{
-	margin:0px auto;	
+	width:1280px;
+	margin:0px auto;
 }
 
 .id{
@@ -35,11 +36,11 @@ body{
 
 .navbar_ul li { 
 	list-style-type:none;
-	width: 280px;
+	width: 240px;
 	text-align:center;
 	display: inline;
 	font-weight:bold;
-	padding:2px 12px;
+	padding:2px 8px;
 	/*margin-left:10px;*/
 }
 
@@ -50,15 +51,45 @@ body{
 	margin-left:20px;
 }
 
+a{	
+	color:inherit;
+	text-decoration:none;
+}
+
+a:hover{
+	color:gray;
+}
 </style>
+
+
+<script>
+
+//로그인 팝업창
+function login_popup(){
+	var w='400';
+	var h='300';
+
+	var l=Math.ceil((window.screen.width-w)/2);
+	var t=Math.ceil((window.screen.height-h)/2);
+	window.open('/webTest/member/login.jsp','loginPopup', 'width='+w+',height='+h+',left='+l+',top='+t);
+}
+
+</script>
+
+
 </head>
+
+
+
+
 <body>
-<div class="id">로그인 | 회원가입</div>
+<div class="id"><a href="javascript:login_popup()">로그인</a>&nbsp;&nbsp;&nbsp;&nbsp;
+<a href="/webTest/member/memberJoin.jsp">회원가입</a></div>
 <nav class="navbar">
 <ul class="navbar_ul">
 <li><img src="/webTest/img/logo.png" alt="로고"></li>
 <li>회사소개</li>
-<li><a href="/moim/info/infoList.jsp">모임하기</a></li>
+<li>모임하기</li>
 <li>후기보기</li>
 <li>공지사항</li>
 </ul>
