@@ -48,6 +48,32 @@ fieldset div{
 	function idcheck() {
 		window.open('idCheck.jsp', 'idcheck','width:300, height:100', 'margin:0px auto');
 	}
+	
+
+	function pwd_check(){
+		var pwd1=document.getElementById('pwd').value;
+		var pwd2=document.getElementById('pwd_confirm').value;
+		var msg=document.getElementById('pwd_error');
+		
+		if(pwd1!=pwd2){
+			msg.innerHTML="비밀번호 불일치";
+			pwd_error.style.color="red";
+		}else{
+			msg.innerHTML="일치";
+			pwd_error.style.color="green";}
+	}
+	
+	/* function name_check(){
+		var name=document.getElementById('name').value;
+		var msg=document.getElementById('name_error');
+		const regex=/[a-zA-Z가-힣]/;
+		
+		if(name!=regex){
+			msg.innerHTML="한글과 영문 대/소문자를 사용하세요.(특수기호, 공백 사용 불가)";
+		}
+	}
+ */
+	
 </script>
 </head>
 <body>
@@ -61,39 +87,26 @@ fieldset div{
 						<li><label>아이디</label></br>
 							<input type="text" name="id" readonly>
 							<input type="button" onclick="idcheck();" value="ID 중복 검사"></li>
-							<span>5~20자의 영문 소문자, 숫자와 특수기호(_),(-)만 사용 가능합니다.</span>
+							<span id="id_error">5~20자의 영문 소문자, 숫자와 특수기호(_),(-)만 사용 가능합니다.</span>
 							
 						<li><label>비밀번호</label></br> 
-							<input type="password" name="pwd1" id="pwd1"></li>
+							<input type="password" name="pwd" id="pwd" ></li>
 							<span>8~16자 영문 대/소문자, 특수문자를 사용하세요</span>
 						
+						
 						<li><label>비밀번호 재확인</label></br> 
-							<input type="password" name="pwd2" id="pwd2" ondblclick="checkPwd()">
-							</li>
-							
-						<!-- 	<script>
-							function checkPwd(){
-								var pwd1=document.getElementById("pwd1").value;
-								var pwd2=document.getElementBuId("pwd2").value;
-							if(pwd1!=pwd2){
-								window.alert('오류');
-									}
-							}
-							</script> -->
+							<input type="password" name="pwd_confirm" id="pwd_confirm" onchange="pwd_check()"></li>
+							<span id="pwd_error"></span>
+						
 							
 						<li><label>이름</label></br> 
-							<input type="text" name="name"></li>
+							<input type="text" name="name" "></li>
 							
 						<li><label>본인 확인 이메일</label></br> 
 							<input type="text" name="email"></li>
 							
 						<li><label>나이</label></br>	
-						<select name="age">
-						<%for(int i=1;i<=100;i++){ %>
-							<option value="<%=i%>"><%=i%></option>
-							<%}%>
-						</select></li>
-						
+						<input type="text" name="age"></li>
 						
 						<li><label>지역</label></br> 
 							<select name="local">
@@ -127,9 +140,6 @@ fieldset div{
 								<option value="봉사">봉사</option>
 								<option value="댄스">댄스</option>
 						</select></li>
-						
-						<!-- <li><label>생년월일</label></br> 
-							<input type="date" name="age"></li>-->
 							
 						<div>
 							<input type="submit" value="회원가입" class="button">

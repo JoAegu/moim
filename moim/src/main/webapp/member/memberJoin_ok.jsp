@@ -10,5 +10,5 @@ String msg=result>0?"회원가입을 축하드립니다.":"다시 시도해주�
 %>
 <script>
 window.alert('<%=msg%>');
-location.href='/webTest/imsi/Main.jsp';
+location.href='/moim/index.jsp';
 </script>
