@@ -62,7 +62,7 @@ section .img{
 	<h2>모임 만들기</h2>
 	<div class="moimcontent">
 		<div class="contents write">
-		<form name="moimWrite" action="moimWrite_ok.jsp">
+		<form name="moimWrite">
 			<table>
 				<tr>
 					<th>카테고리</th>
@@ -96,18 +96,18 @@ section .img{
 					<td>
 						<select name="local">
 							<option value="서울" selected>서울</option>
-							<option value="경기도">경기</option>
+							<option value="경기">경기</option>
 							<option value="인천">인천</option>
-							<option value="강원도">강원</option>
-							<option value="충청북도">충북</option>
-							<option value="충청남도">충남</option>
+							<option value="강원">강원</option>
+							<option value="충북">충북</option>
+							<option value="충남">충남</option>
 							<option value="대전">대전</option>
 							<option value="세종">세종</option>
-							<option value="전라북도">전북</option>
-							<option value="전라남도">전남</option>
+							<option value="전북">전북</option>
+							<option value="전남">전남</option>
 							<option value="광주">광주</option>
-							<option value="경상북도">경북</option>
-							<option value="경상남도">경남</option>
+							<option value="경북">경북</option>
+							<option value="경남">경남</option>
 							<option value="대구">대구</option>
 							<option value="울산">울산</option>
 							<option value="부산">부산</option>
