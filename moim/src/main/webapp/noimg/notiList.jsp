@@ -31,7 +31,7 @@ session.setAttribute("category", category);
 
 //ndao.getList 매개변수 3)ls
 int totalContent=ndao.getNotiTotalCnt( keyword);
-int listsize=10;
+int listsize=5;
 int pageSize=5;
 	
 //ndao.getList 매개변수 4)cp

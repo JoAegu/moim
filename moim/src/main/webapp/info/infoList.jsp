@@ -162,6 +162,7 @@ input[type="text"]{
 	left: 50%;
 	transform: translate(-50%, -50%) scale(1.1);
 	transition:all 0.5s;
+	
 }
 .thumb1 img:hover{
 	transform: translate(-50%, -50%) scale(1.2);
@@ -210,6 +211,7 @@ input[type="text"]{
 	color: #333333;
 }
 .infotable{
+	width:240px;
 	border-radius: 14px;
 	border:2px solid #ebedee;
 	transition:0.4s;
@@ -252,6 +254,7 @@ input[type="text"]{
     text-overflow: ellipsis;
     white-space: nowrap;
 }
+
 .title:hover{
 	color: #00cdac;
 }

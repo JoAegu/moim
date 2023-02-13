@@ -142,7 +142,6 @@ h3{
    padding-bottom:50px;
 }
 .current_moim h2{
-   text-align:center;
    margin:0;
    padding-top:50px;
 }
@@ -296,10 +295,10 @@ tr a:visited, tr a:link{
 }
 
 .notice table #subject{
-   width: 40%;
    text-align: left;
-   padding-left: 40px;
+  	padding: 0 40px 0 40px;
 }
+
 #subject:hover{
    font-weight:bold;
 }
@@ -398,7 +397,7 @@ tr a:visited, tr a:link{
       <li>
          <div>
             <label for="slide02" class="left"></label>
-            <a href="/moim/info/infoList.jsp">
+            <a href="/moim/info/infoSearch.jsp?keyword=&hobby=공연&local=전체.jsp">
             <img src="/moim/img/banner_main2.jpg" alt="매인 배너">
             </a>
             <label for="slide01" class="right"></label>
