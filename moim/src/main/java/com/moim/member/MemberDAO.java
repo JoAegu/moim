@@ -169,9 +169,8 @@ public class MemberDAO {
 			conn=com.moim.db.MoimDB.getConn();
 			int start=(cp-1)*ls+1;
 			int end=(cp*ls);
-//			String sql="select * from moim_noimg where category=? and idx_member=?";
-			String sql="select * from"
-					+ "(select rownum as rnum,a.*from "
+			String sql="select * from "
+					+ "(select rownum as rnum,a.* from "
 					+ "(select * from moim_noimg where category=? and idx_member=? order by ref desc,sunbun asc)a)b "
 					+ "where rnum>=? and rnum<=?" ;
 			ps=conn.prepareStatement(sql);
@@ -179,8 +178,6 @@ public class MemberDAO {
 			ps.setInt(2, idx_member);
 			ps.setInt(3, start);
 			ps.setInt(4, end);
-//			ps.setInt(1, category);
-//			ps.setInt(2, idx_member);
 			rs=ps.executeQuery();
 			ArrayList<NoimgDTO> arr=new ArrayList<NoimgDTO>();
 			while(rs.next()) {

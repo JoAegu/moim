@@ -174,10 +174,6 @@ Integer idx=(Integer)session.getAttribute("idx");
 if(idx==null){
 	idx=0;
 }
-Integer idx_member=(Integer)session.getAttribute("idx_member");
-if(idx_member==null){
-	idx_member=0;
-}
 
 int listSize=5;
 int pageSize=5;
@@ -229,7 +225,6 @@ if(cp2%pageSize==0)userGroup2--;
 			</thead>
 			<tbody>
 			<%
-			ReviewDTO dto = rdao.getContent(idx);
 			ArrayList<ReviewDTO> dto1=mdao.getMyReview(idx,listSize,cp);
 			if(dto1==null||dto1.size()==0){
 				%>
@@ -292,7 +287,7 @@ if(cp2%pageSize==0)userGroup2--;
 			<tbody>
 				<%
 				HashMap<Integer,String> map1=mdao.moimName();
-				ArrayList<NoimgDTO> dto2=mdao.getMyQna(2, idx_member,listSize,cp2);
+				ArrayList<NoimgDTO> dto2=mdao.getMyQna(2, idx,listSize,cp2);
 				if(dto2==null||dto2.size()==0){
 					%>
 					<tr>

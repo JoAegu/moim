@@ -426,7 +426,13 @@ tr a:visited, tr a:link{
 <li>
 <div class="info">
 <a href="/moim/info/moimContent.jsp?idx=<%=needarr.get(i).getIdx()%>">
-	<div class="thumb"><img alt="needimg<%=i%>" src="/moim/userimg/<%=needarr.get(i).getImg()%>"></div>
+	<div class="thumb">
+	<%if(needarr.get(i).getImg()!=null&&!needarr.get(i).getImg().equals("")){ %>
+				<img alt="img<%=i %>" src="/moim/userimg/<%=needarr.get(i).getImg()%>">
+			<%}else{ %>	
+				<img alt="noimg<%=i %>" src="/moim/img/noimg.png">
+			<%} %>
+	</div>
 	<div class="title"><%=needarr.get(i).getMoimname() %></div>
 	<div class="moim_info"><%=needarr.get(i).getHobby() %>&nbsp;/&nbsp;<%=needarr.get(i).getLocal() %></div>
 </a>
