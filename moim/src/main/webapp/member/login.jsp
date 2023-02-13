@@ -20,8 +20,8 @@
 }
 
 .logo Img{
-	width:81px;
-	height:62px;
+	width:80px;
+	height:35px;
 	object-fit:cover;
 	margin: 0 0 10px 0;
 
