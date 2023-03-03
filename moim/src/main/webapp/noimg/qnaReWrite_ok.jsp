@@ -10,7 +10,6 @@ request.setCharacterEncoding("UTF-8");
 <%
 String writer = (String) session.getAttribute("name");
 String idx_info=request.getParameter("idx_info");
-System.out.println(idx_info);
 
 String idx_s=request.getParameter("idx");
 int idx=Integer.parseInt(idx_s);
@@ -22,6 +21,5 @@ String msg=result>0?"답변글이 등록되었습니다.":"답변글 등록에 �
 %>
 <script>
 window.alert('<%=msg%>');
-location.reload();
 location.href='/moim/info/moimContent.jsp?idx=<%=idx_info%>';
 </script>
